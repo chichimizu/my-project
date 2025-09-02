@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ikku</title>
 </head>
 <body>
-    <h1>自身の人生について、素直に考えてみましょう</h1>
-    <p>
-      <form>
-        今の気持ちを5～6文字で<input type ="" text ="7"><br>
-        好きなことを12～14文字で説明しましょう<input type ="" text ="14"><br>
+    <h2>自身の人生について、素直に考えてみましょう</h2>
+    <form id="myForm">
 
-        print
+        今の気持ちを5～6文字で<input id ="type1" type="text" maxlength ="7"><br>
+        好きなことを12～14文字で説明しましょう<input id="type2" type="text" maxlength ="14"><br>
       </form>
-      </p>
+
+      <p id="result"></p>
+
+  <script>
+    function generateSentence() {
+    
+    let feeling = document.getElementById("type1").value;
+    let favorite = document.getElementById("type2").value;
+
+    // まとめて一句にする
+    let sentence = feeling + " " + favorite;
+
+    // 結果を表示
+    document.getElementById("result").textContent = "本日の一句: " + sentence;
+    }
+  </script>
+
+
 </body>
 </html>
